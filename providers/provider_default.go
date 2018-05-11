@@ -19,7 +19,7 @@ func (p *ProviderData) Redeem(redirectURL, code string) (s *SessionState, err er
 	}
 
 	params := url.Values{}
-	params.Add("redirect_uri", redirectURL)
+	params.Add("redirect_uri", "https://halp.localhost/oauth2/callback")
 	params.Add("client_id", p.ClientID)
 	params.Add("client_secret", p.ClientSecret)
 	params.Add("code", code)
